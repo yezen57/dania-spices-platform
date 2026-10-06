@@ -1,8 +1,16 @@
-# Dania Spices
+<p align="center">
+  <img src="img/DANIA%20LOGO%20PNG-01.png" alt="Dania Spices Logo" width="240" />
+</p>
 
-A modern, responsive e-commerce showcase and content management web platform built for Dania Spices, a premium purveyor of natural spices, organic dates, raw honey, nuts, and natural oils based in Djibouti.
+<h1 align="center">Dania Spices</h1>
 
-The platform provides a bilingual customer-facing digital storefront with seamless Arabic (RTL) and English/French (LTR) navigation, alongside a client-side administrative dashboard for managing showcase items, promotional sliders, media galleries, and incoming customer inquiries.
+<p align="center">
+  <strong>A modern, responsive e-commerce showcase and content management web platform built for Dania Spices, a premium purveyor of natural spices, organic dates, raw honey, nuts, and natural oils based in Djibouti.</strong>
+</p>
+
+<p align="center">
+  Multilingual (Arabic / English / French) &bull; Client-Side Administration &bull; RTL & LTR Support
+</p>
 
 ---
 
