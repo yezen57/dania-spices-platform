@@ -1,0 +1,304 @@
+/* Import custom fonts */
+
+@font-face {
+    font-family: 'A Lamia';
+    src: url('/fonts/A-Lamia.woff2') format('woff2'), url('/fonts/A-Lamia.woff') format('woff'), url('/fonts/A-Lamia.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'A Lamia';
+    src: url('/fonts/A-Lamia-Bold.woff2') format('woff2'), url('/fonts/A-Lamia-Bold.woff') format('woff'), url('/fonts/A-Lamia-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Abdoullah Ashger EL-kharef';
+    src: url('/fonts/Abdoullah-Ashger-EL-kharef.woff2') format('woff2'), url('/fonts/Abdoullah-Ashger-EL-kharef.woff') format('woff'), url('/fonts/Abdoullah-Ashger-EL-kharef.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Abdoullah Ashger EL-kharef';
+    src: url('/fonts/Abdoullah-Ashger-EL-kharef-Bold.woff2') format('woff2'), url('/fonts/Abdoullah-Ashger-EL-kharef-Bold.woff') format('woff'), url('/fonts/Abdoullah-Ashger-EL-kharef-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+    --dark-wood: #4A2E20;
+    --light-wood: #D3B48A;
+    --sand-beige: #EFE3D1;
+    --ivory-white: #F5F5F5;
+    --gold-accent: #D6A84F;
+    --light-gray: #DCDCDC;
+    --charcoal-black: #1A1A1A;
+    /* Light theme colors using only the specified palette */
+    --background: var(--ivory-white);
+    --foreground: var(--charcoal-black);
+    --card: var(--ivory-white);
+    --card-foreground: var(--charcoal-black);
+    --popover: var(--ivory-white);
+    --popover-foreground: var(--charcoal-black);
+    --primary: var(--gold-accent);
+    --primary-foreground: var(--ivory-white);
+    --secondary: var(--sand-beige);
+    --secondary-foreground: var(--charcoal-black);
+    --muted: var(--light-gray);
+    --muted-foreground: var(--dark-wood);
+    --accent: var(--light-wood);
+    --accent-foreground: var(--charcoal-black);
+    --destructive: var(--dark-wood);
+    --destructive-foreground: var(--ivory-white);
+    --border: var(--light-wood);
+    --input: var(--light-gray);
+    --ring: var(--gold-accent);
+    --radius: 0.5rem;
+}
+
+.dark {
+    /* Dark theme colors using only the specified palette */
+    --background: var(--charcoal-black);
+    --foreground: var(--ivory-white);
+    --card: var(--dark-wood);
+    --card-foreground: var(--ivory-white);
+    --popover: var(--dark-wood);
+    --popover-foreground: var(--ivory-white);
+    --primary: var(--gold-accent);
+    --primary-foreground: var(--charcoal-black);
+    --secondary: var(--dark-wood);
+    --secondary-foreground: var(--ivory-white);
+    --muted: var(--dark-wood);
+    --muted-foreground: var(--ivory-white);
+    --accent: var(--dark-wood);
+    --accent-foreground: var(--ivory-white);
+    --destructive: #4A2E20;
+    --destructive-foreground: var(--ivory-white);
+    --border: var(--light-wood);
+    --input: var(--dark-wood);
+    --ring: var(--gold-accent);
+}
+
+
+/* Dark mode text color overrides */
+
+.dark * {
+    color: var(--ivory-white) !important;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+    color: var(--ivory-white) !important;
+}
+
+.dark p,
+.dark span,
+.dark div,
+.dark label,
+.dark input,
+.dark textarea,
+.dark select,
+.dark button {
+    color: var(--ivory-white) !important;
+}
+
+.dark a {
+    color: var(--ivory-white) !important;
+}
+
+.dark a:hover {
+    color: var(--gold-accent) !important;
+}
+
+
+/* Keep primary elements gold in dark mode */
+
+.dark .text-primary,
+.dark .bg-primary,
+.dark .border-primary {
+    color: var(--gold-accent) !important;
+}
+
+.dark .bg-primary {
+    background-color: var(--gold-accent) !important;
+}
+
+.dark .border-primary {
+    border-color: var(--gold-accent) !important;
+}
+
+
+/* Ensure form elements are readable */
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+    color: var(--light-wood) !important;
+}
+
+.dark input:focus,
+.dark textarea:focus {
+    color: var(--ivory-white) !important;
+    background-color: var(--dark-wood) !important;
+}
+
+* {
+    @apply border-border;
+}
+
+body {
+    @apply bg-gradient-to-br from-sand-beige via-ivory-white to-light-wood text-foreground transition-colors duration-300;
+    font-family: 'Abdoullah Ashger EL-kharef', sans-serif;
+}
+
+.dark body {
+    @apply bg-gradient-to-br from-dark-wood via-charcoal-black to-dark-wood;
+}
+
+
+/* Arabic text styling */
+
+[dir="rtl"],
+.arabic-text,
+.rtl {
+    font-family: 'A Lamia', sans-serif;
+}
+
+
+/* English text styling */
+
+.english-text,
+.ltr {
+    font-family: 'Abdoullah Ashger EL-kharef', sans-serif;
+}
+
+
+/* Mixed content styling */
+
+.mixed-content {
+    font-family: 'A Lamia', 'Abdoullah Ashger EL-kharef', sans-serif;
+}
+
+.hero-pattern {
+    background-image: radial-gradient(circle at 25% 25%, rgba(214, 168, 79, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(74, 46, 32, 0.1) 0%, transparent 50%);
+}
+
+.spice-gradient {
+    background: linear-gradient(135deg, var(--gold-accent) 0%, var(--dark-wood) 50%, var(--charcoal-black) 100%);
+}
+
+.glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(245, 245, 245, 0.1);
+    border: 1px solid rgba(211, 180, 138, 0.2);
+}
+
+.dark .glass-effect {
+    background: rgba(26, 26, 26, 0.2);
+    border: 1px solid rgba(211, 180, 138, 0.1);
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.parallax {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+.category-card {
+    background: linear-gradient(145deg, rgba(245, 245, 245, 0.9), rgba(239, 227, 209, 0.7));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(211, 180, 138, 0.3);
+}
+
+.dark .category-card {
+    background: linear-gradient(145deg, rgba(26, 26, 26, 0.3), rgba(74, 46, 32, 0.1));
+    border: 1px solid rgba(211, 180, 138, 0.1);
+}
+
+.testimonial-card {
+    background: linear-gradient(145deg, rgba(214, 168, 79, 0.1), rgba(211, 180, 138, 0.1));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(214, 168, 79, 0.2);
+}
+
+.dark .testimonial-card {
+    background: linear-gradient(145deg, rgba(214, 168, 79, 0.05), rgba(211, 180, 138, 0.05));
+    border: 1px solid rgba(214, 168, 79, 0.1);
+}
+
+.recipe-card {
+    background: linear-gradient(145deg, rgba(214, 168, 79, 0.1), rgba(211, 180, 138, 0.1));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(214, 168, 79, 0.2);
+}
+
+.dark .recipe-card {
+    background: linear-gradient(145deg, rgba(214, 168, 79, 0.05), rgba(211, 180, 138, 0.05));
+    border: 1px solid rgba(214, 168, 79, 0.1);
+}
+
+.admin-card {
+    background: linear-gradient(145deg, rgba(214, 168, 79, 0.1), rgba(211, 180, 138, 0.1));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(214, 168, 79, 0.2);
+}
+
+.dark .admin-card {
+    background: linear-gradient(145deg, rgba(214, 168, 79, 0.05), rgba(211, 180, 138, 0.05));
+    border: 1px solid rgba(214, 168, 79, 0.1);
+}
+
+.transparent-bg-story {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.12;
+    z-index: 0;
+    pointer-events: none;
+    user-select: none;
+}
